@@ -55,6 +55,12 @@ Requests is the library we will need to reach out to the webhook
 - Click `Create Action` > `Continue` > `Finish` to complete
 - You will also need the key for the webhook.  That can be found by going to the [webhooks IFTTT page](https://ifttt.com/maker_webhooks) and click `Documentation` for the key.
 - Save this key and **DO NOT SHARE IT WITH ANYONE!!!**<br>If someone else gets this key they can post to your channel!
+- Test the whole thing by using the following code changing:<br>`{event}` to `bitcoin_price_tracker` (or whatever you named the event in the `If This` portion of the IFTTT setup)<br>And `{YourWebhookAPIKey}` to the key we just retrieved.
+`curl -X POST -H "Content-Type: application/json" -d '{"this":[{"is":{"some":["test","data"]}}]}' https://maker.ifttt.com/trigger/{event}/json/with/key/b{YourWebhookAPIKey}`
+- You will now see `Congratulations! You've fired the bitcoin_price_tracker JSON event` in the terminal and your Discord channel will recieve the message `Latest bitcoin prices:
+
+{"this":[{"is":{"some":["test","data"]}}]}`
+- **Note: If this does not work, ensure you have the IFTTT Discord bot in the channel you are trying to message in<br>![alt text](https://i.imgur.com/uAmlIUe.png)
 
 
 ## Python Code
