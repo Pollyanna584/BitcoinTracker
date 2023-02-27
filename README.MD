@@ -54,7 +54,7 @@ Requests is the library we will need to reach out to the webhook
 - I am only going to use the `Message` action field, so I am going to delete the info from every other field and enter ```Latest bitcoin prices:<br>{{JsonPayload}}``` as my message.
 - Click `Create Action` > `Continue` > `Finish` to complete
 - You will also need the key for the webhook.  That can be found by going to the [webhooks IFTTT page](https://ifttt.com/maker_webhooks) and click `Documentation` for the key.
-- Save this key and do not share it!
+- Save this key and **DO NOT SHARE IT WITH ANYONE!!!**<br>If someone else gets this key they can post to your channel!
 
 
 ## Python Code
