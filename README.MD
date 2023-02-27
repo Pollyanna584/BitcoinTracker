@@ -24,10 +24,13 @@ This is currently in a semi-working state.  The [Discord applet](https://ifttt.c
 
 ## Python environment
 If you are familiar with virutal environments, you can skip this part, otherwise:
+- Within Terminal, ensure you are in the same folder your project is
 - Create a virtual environemnt within python:<br>`python3 -m venv bitcoin_env`
 - Activate the virtual environment<br>`source bitcoin_env/bin/activate`
+- Your terminal should now have `(bitcoin_env)` in front of your username
 - Install requests `pip install requests`
-Requests is the library we will need to reach out to the webhook
+<br>Requests is the library we will need to reach out to the webhook
+- Once you are done working on the project, you can revert back to your main python install by typing `deactivate`
 
 ## Setup CoinMarketCap API
 - Sign up for a free account at the [CoinMarketCap Website](https://coinmarketcap.com/api/)
@@ -57,10 +60,10 @@ Requests is the library we will need to reach out to the webhook
 - Save this key and **DO NOT SHARE IT WITH ANYONE!!!**<br>If someone else gets this key they can post to your channel!
 - Test the whole thing by using the following code changing:<br>`{event}` to `bitcoin_price_tracker` (or whatever you named the event in the `If This` portion of the IFTTT setup)<br>And `{YourWebhookAPIKey}` to the key we just retrieved.
 `curl -X POST -H "Content-Type: application/json" -d '{"this":[{"is":{"some":["test","data"]}}]}' https://maker.ifttt.com/trigger/{event}/json/with/key/b{YourWebhookAPIKey}`
-- You will now see `Congratulations! You've fired the bitcoin_price_tracker JSON event` in the terminal and your Discord channel will recieve the message `Latest bitcoin prices:
-
-{"this":[{"is":{"some":["test","data"]}}]}`
-- **Note: If this does not work, ensure you have the IFTTT Discord bot in the channel you are trying to message in<br>![alt text](https://i.imgur.com/uAmlIUe.png)
+- You will now see `Congratulations! You've fired the bitcoin_price_tracker JSON event` in the terminal and your Discord channel will recieve the message
+    `Latest bitcoin prices:`
+    `{"this":[{"is":{"some":["test","data"]}}]}`
+- **Note: If this does not work, ensure you have the IFTTT Discord bot in the channel you are trying to message**<br>![alt text](https://i.imgur.com/uAmlIUe.png)
 
 
 ## Python Code
