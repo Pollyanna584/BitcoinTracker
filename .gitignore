@@ -1,7 +1,11 @@
 # Ignoring keys #
-###################
+#################
 *.pem
 
-# Ignoring environment
-#########################
+# Ignoring environment #
+########################
 bitcoin_env/
+
+# Specific Files #
+##################
+.DS_Store
