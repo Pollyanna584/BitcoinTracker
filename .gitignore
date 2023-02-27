@@ -1,0 +1,7 @@
+# Ignoring keys #
+###################
+*.pem
+
+# Ignoring environment
+#########################
+bitcoin_env/
