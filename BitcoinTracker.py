@@ -31,7 +31,7 @@ def getInfo (): # Function to get the info
 
     btcPrice = round(btcPrice, 2)
     btcPrice = float((f'{btcPrice:.2f}'))
-    pprint.pprint(btcPrice)
+    pprint.pprint(btcPrice) #This tests the price and prints it out in terminal.  You can comment it out when testing is complete
 
 def post_ifttt_webhook(event, value):
     # The payload that will be sent to IFTTT service
